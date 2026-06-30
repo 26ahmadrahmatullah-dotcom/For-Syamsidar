@@ -75,16 +75,42 @@ from{opacity:.3;}
 to{opacity:1;}
 }
 
+.photo-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+margin:25px 0;
+flex-wrap:wrap;
+}
+
 .photo{
-width:220px;
-height:220px;
+width:180px;
+height:180px;
 object-fit:cover;
-border-radius:50%;
+border-radius:20px;
 border:5px solid white;
-box-shadow:0 0 25px rgba(255,255,255,.4);
-display:block;
-margin:20px auto;
-animation:float 4s ease-in-out infinite;
+box-shadow:0 0 25px rgba(255,255,255,.35);
+}
+
+.photo1{
+animation:floatUp 4s ease-in-out infinite;
+}
+
+.photo2{
+animation:floatDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+@keyframes floatDown{
+0%{transform:translateY(-15px);}
+50%{transform:translateY(0);}
+100%{transform:translateY(-15px);}
 }
 
 @keyframes float{
