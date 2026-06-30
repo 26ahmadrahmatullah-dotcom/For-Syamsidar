@@ -84,21 +84,28 @@ margin:25px 0;
 flex-wrap:wrap;
 }
 
-.photo{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:20px;
-border:5px solid white;
-box-shadow:0 0 25px rgba(255,255,255,.35);
+@keyframes floatUp{
+0%{
+transform:translateY(0) rotate(-6deg);
+}
+50%{
+transform:translateY(-15px) rotate(-6deg);
+}
+100%{
+transform:translateY(0) rotate(-6deg);
+}
 }
 
-.photo1{
-animation:floatUp 4s ease-in-out infinite;
+@keyframes floatDown{
+0%{
+transform:translateY(-15px) rotate(6deg);
 }
-
-.photo2{
-animation:floatDown 4s ease-in-out infinite;
+50%{
+transform:translateY(0) rotate(6deg);
+}
+100%{
+transform:translateY(-15px) rotate(6deg);
+}
 }
 
 @keyframes floatUp{
