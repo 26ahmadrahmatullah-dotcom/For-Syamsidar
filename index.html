@@ -238,7 +238,7 @@ Semoga kamu suka ya 😊
 <button onclick="showSurprise()">
 🎉 Klik Kejutan
 </button>
-
+<h2 id="countdown" style="margin-top:20px;font-size:50px;"></h2>
 </div>
 
 <!-- HALAMAN KEDUA -->
@@ -276,7 +276,7 @@ alt="Foto Syamsidar">
 💌 Untuk Syamsidar
 </h3>
 
-<p>
+<p id="typingText">
 
 Selamat ulang tahun ya... ✨
 
@@ -327,7 +327,21 @@ BAHAGIA SELALU 😊
 </div>
 <script>
 
-function showSurprise(){
+async function showSurprise(){
+
+const cd = document.getElementById("countdown");
+
+cd.innerHTML = "3";
+await new Promise(r => setTimeout(r,1000));
+
+cd.innerHTML = "2";
+await new Promise(r => setTimeout(r,1000));
+
+cd.innerHTML = "1";
+await new Promise(r => setTimeout(r,1000));
+
+cd.innerHTML = "🎉";
+await new Promise(r => setTimeout(r,600));
 
     // Sembunyikan halaman pertama
     document.getElementById("page1").classList.add("hidden");
