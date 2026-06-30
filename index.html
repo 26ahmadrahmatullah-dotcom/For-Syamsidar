@@ -56,8 +56,20 @@ background:radial-gradient(circle at top,
 #312e81 40%,
 #0f172a 100%);
 overflow:hidden;
+    
+animation:fadeUp 1s ease;
 }
 
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 .page2::before{
 content:"🌙";
 position:absolute;
@@ -80,7 +92,30 @@ animation:twinkle 3s infinite alternate;
 from{opacity:.3;}
 to{opacity:1;}
 }
+.stars{
+position:absolute;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
 
+.star{
+position:absolute;
+font-size:20px;
+color:white;
+animation:blink 2s infinite;
+}
+
+@keyframes blink{
+0%,100%{
+opacity:.2;
+transform:scale(.8);
+}
+50%{
+opacity:1;
+transform:scale(1.2);
+}
+}
 .photo-container{
 display:flex;
 justify-content:center;
@@ -209,6 +244,15 @@ Semoga kamu suka ya 😊
 <!-- HALAMAN KEDUA -->
 
 <div class="card page2 hidden" id="page2">
+    <div class="stars">
+    <span class="star" style="top:8%; left:12%;">✨</span>
+    <span class="star" style="top:15%; right:18%;">⭐</span>
+    <span class="star" style="top:35%; left:8%;">✨</span>
+    <span class="star" style="top:28%; right:10%;">✨</span>
+    <span class="star" style="top:65%; left:15%;">⭐</span>
+    <span class="star" style="top:75%; right:20%;">✨</span>
+    <span class="star" style="top:85%; left:40%;">⭐</span>
+</div>
 
 <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
 
