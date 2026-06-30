@@ -1,8 +1,14 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Syamsidar</title><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script><style>
+
+<title>Happy Birthday Syamsidar ❤️</title>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<style>
 
 *{
 margin:0;
@@ -22,14 +28,13 @@ color:white;
 overflow-y:auto;
 }
 
-/* Kartu utama */
 .card{
-max-width:550px;
+max-width:600px;
 width:100%;
 padding:30px;
 border-radius:25px;
 text-align:center;
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,.08);
 backdrop-filter:blur(12px);
 box-shadow:0 0 30px rgba(255,255,255,.15);
 position:relative;
@@ -40,29 +45,25 @@ margin:20px 0;
 display:none;
 }
 
-/* HALAMAN KEDUA */
 .page2{
-background:
-radial-gradient(circle at top,
+background:radial-gradient(circle at top,
 #4c1d95 0%,
 #312e81 40%,
 #0f172a 100%);
 overflow:hidden;
 }
 
-/* Bulan */
 .page2::before{
 content:"🌙";
 position:absolute;
-top:15px;
+top:20px;
 right:25px;
 font-size:65px;
 filter:drop-shadow(0 0 15px white);
 }
 
-/* Bintang */
 .page2::after{
-content:"🎉";
+content:"✨ ✨ ✨";
 position:absolute;
 top:90px;
 left:20px;
@@ -76,158 +77,346 @@ to{opacity:1;}
 }
 
 .photo-container{
-.photo{
-    width:180px;
-    height:180px;
-    object-fit:cover;
-    border-radius:20px;
-    border:5px solid white;
-    box-shadow:0 0 25px rgba(255,255,255,.35);
-}
-
-.photo1{
-    animation:floatUp 4s ease-in-out infinite;
-}
-
-.photo2{
-    animation:floatDown 4s ease-in-out infinite;
-}    
 display:flex;
 justify-content:center;
 align-items:center;
-gap:20px;
-margin:25px 0;
+gap:18px;
 flex-wrap:wrap;
+margin:30px 0;
 }
 
-@keyframes floatUp{
+.photo{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:18px;
+border:5px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.photo:hover{
+transform:scale(1.05);
+}
+
+.photo1{
+transform:rotate(-6deg);
+animation:floatLeft 4s ease-in-out infinite;
+}
+
+.photo2{
+transform:rotate(6deg);
+animation:floatRight 4s ease-in-out infinite;
+}
+
+@keyframes floatLeft{
+
 0%{
 transform:translateY(0) rotate(-6deg);
 }
+
 50%{
 transform:translateY(-15px) rotate(-6deg);
 }
+
 100%{
 transform:translateY(0) rotate(-6deg);
 }
+
 }
 
-@keyframes floatDown{
+@keyframes floatRight{
+
 0%{
 transform:translateY(-15px) rotate(6deg);
 }
+
 50%{
 transform:translateY(0) rotate(6deg);
 }
+
 100%{
 transform:translateY(-15px) rotate(6deg);
 }
+
 }
-
-
-
-
-
 
 h1{
 font-size:2.2rem;
 margin-bottom:10px;
 }
 
-h2{
-margin-top:10px;
-}
-
 button{
 margin-top:20px;
-padding:12px 24px;
+padding:14px 28px;
 border:none;
-border-radius:30px;
+border-radius:40px;
 background:#ff4d6d;
 color:white;
 font-size:16px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-transform:scale(1.05);
+transform:scale(1.08);
+box-shadow:0 0 20px #ff4d6d;
 }
 
 .message-card{
-margin-top:15px;
-padding:20px;
-background:rgba(255,255,255,0.12);
+margin-top:20px;
+padding:22px;
+background:rgba(255,255,255,.12);
 border-radius:20px;
 backdrop-filter:blur(8px);
-text-align:left;
 line-height:1.8;
+text-align:left;
 box-shadow:0 0 20px rgba(255,255,255,.15);
 }
 
 .signature{
 margin-top:20px;
-font-size:18px;
+font-size:20px;
+font-weight:bold;
+}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Syamsidar ❤️</title>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-</style></head><body><!-- HALAMAN PERTAMA --><div class="card" id="page1"><h1>👋 Hai Syamsidar</h1>
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:20px;
+color:white;
+overflow-y:auto;
+}
 
-<p style="margin-top:20px;">
-Aku punya sesuatu yang ingin aku tunjukkan untukmu ✨
-<br><br>
-Klik tombol di bawah ya 😊
-</p>
-</p><button onclick="showSurprise()">
-🎉 Klik Kejutan
-</button></div><!-- HALAMAN KEDUA --><div class="card page2 hidden" id="page2"><h1>🎉 HAPPY BIRTHDAY 🎉</h1><div class="photo-container">
-    <img src="Sidar.jpg" class="photo photo1" alt="Foto Syamsidar">
-    <img src="file_00000000a11471fa8f7d4446911a8400.jpg" class="photo photo2" alt="Foto Syamsidar">
-</div><div class="message-card"><h3 style="text-align:center;">
-💌 Untuk Syamsidar
-</h3><p>Selamat ulang tahun ✨
+.card{
+max-width:600px;
+width:100%;
+padding:30px;
+border-radius:25px;
+text-align:center;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+box-shadow:0 0 30px rgba(255,255,255,.15);
+position:relative;
+margin:20px 0;
+}
 
-<br><br>
+.hidden{
+display:none;
+}
 
-Semoga Allah selalu memberikan kesehatan,
-kebahagiaan, umur yang berkah,
-dan rezeki yang melimpah.
+.page2{
+background:radial-gradient(circle at top,
+#4c1d95 0%,
+#312e81 40%,
+#0f172a 100%);
+overflow:hidden;
+}
 
-<br><br>
+.page2::before{
+content:"🌙";
+position:absolute;
+top:20px;
+right:25px;
+font-size:65px;
+filter:drop-shadow(0 0 15px white);
+}
 
-Semoga semua impian dan harapan yang sedang diperjuangkan
-dapat terwujud satu per satu.
+.page2::after{
+content:"✨ ✨ ✨";
+position:absolute;
+top:90px;
+left:20px;
+font-size:18px;
+animation:twinkle 3s infinite alternate;
+}
 
-<br><br>
+@keyframes twinkle{
+from{opacity:.3;}
+to{opacity:1;}
+}
 
-Terima kasih telah menjadi pribadi yang baik,
-kuat, dan selalu membawa kebahagiaan bagi orang-orang di sekitarmu. 💖
+.photo-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+margin:30px 0;
+}
 
-</p></div><div class="signature">
- BAHAGIA SELALU 😊
-</div><audio id="musik" loop>
-<source src="8cf90f3e3bf148bcd5823a883453d1a4.mp3" type="audio/mpeg">
-</audio></div><script>
+.photo{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:18px;
+border:5px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.photo:hover{
+transform:scale(1.05);
+}
+
+.photo1{
+transform:rotate(-6deg);
+animation:floatLeft 4s ease-in-out infinite;
+}
+
+.photo2{
+transform:rotate(6deg);
+animation:floatRight 4s ease-in-out infinite;
+}
+
+@keyframes floatLeft{
+
+0%{
+transform:translateY(0) rotate(-6deg);
+}
+
+50%{
+transform:translateY(-15px) rotate(-6deg);
+}
+
+100%{
+transform:translateY(0) rotate(-6deg);
+}
+
+}
+
+@keyframes floatRight{
+
+0%{
+transform:translateY(-15px) rotate(6deg);
+}
+
+50%{
+transform:translateY(0) rotate(6deg);
+}
+
+100%{
+transform:translateY(-15px) rotate(6deg);
+}
+
+}
+
+h1{
+font-size:2.2rem;
+margin-bottom:10px;
+}
+
+button{
+margin-top:20px;
+padding:14px 28px;
+border:none;
+border-radius:40px;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #ff4d6d;
+}
+
+.message-card{
+margin-top:20px;
+padding:22px;
+background:rgba(255,255,255,.12);
+border-radius:20px;
+backdrop-filter:blur(8px);
+line-height:1.8;
+text-align:left;
+box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+.signature{
+margin-top:20px;
+font-size:20px;
+font-weight:bold;
+}  
+<script>
 
 function showSurprise(){
 
-document.getElementById("page1").classList.add("hidden");
-document.getElementById("page2").classList.remove("hidden");
+    // Sembunyikan halaman pertama
+    document.getElementById("page1").classList.add("hidden");
 
-document.getElementById("musik").play();
+    // Tampilkan halaman kedua
+    document.getElementById("page2").classList.remove("hidden");
 
-confetti({
-particleCount:400,
-spread:180,
-origin:{y:0.6}
-});
+    // Putar musik
+    const musik = document.getElementById("musik");
+    musik.volume = 0.7;
+    musik.play();
 
-setTimeout(()=>{
-confetti({
-particleCount:200,
-spread:360
-});
-},1000);
+    // Confetti utama
+    confetti({
+        particleCount:250,
+        spread:180,
+        startVelocity:45,
+        origin:{ y:0.6 }
+    });
+
+    // Confetti kiri
+    setTimeout(()=>{
+        confetti({
+            particleCount:120,
+            angle:60,
+            spread:70,
+            origin:{x:0}
+        });
+    },400);
+
+    // Confetti kanan
+    setTimeout(()=>{
+        confetti({
+            particleCount:120,
+            angle:120,
+            spread:70,
+            origin:{x:1}
+        });
+    },700);
+
+    // Confetti hujan
+    setTimeout(()=>{
+        confetti({
+            particleCount:180,
+            spread:360,
+            startVelocity:30,
+            ticks:250,
+            origin:{y:0}
+        });
+    },1200);
 
 }
 
-</script></body>
+</script>
+
+</body>
 </html>
