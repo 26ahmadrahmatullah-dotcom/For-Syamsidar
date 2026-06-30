@@ -179,187 +179,103 @@ margin-top:20px;
 font-size:20px;
 font-weight:bold;
 }
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</style>
+</head>
 
-<title>Happy Birthday Syamsidar ❤️</title>
+<body>
 
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<!-- HALAMAN PERTAMA -->
+<div class="card" id="page1">
 
-<style>
+<h1>👋 Hai Syamsidar</h1>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<p style="margin-top:20px;font-size:18px;line-height:1.8;">
+Aku punya sesuatu yang ingin aku tunjukkan untukmu ✨
+<br><br>
+Semoga kamu suka ya 😊
+</p>
 
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:flex-start;
-padding:20px;
-color:white;
-overflow-y:auto;
-}
+<button onclick="showSurprise()">
+🎉 Klik Kejutan
+</button>
 
-.card{
-max-width:600px;
-width:100%;
-padding:30px;
-border-radius:25px;
-text-align:center;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-box-shadow:0 0 30px rgba(255,255,255,.15);
-position:relative;
-margin:20px 0;
-}
+</div>
 
-.hidden{
-display:none;
-}
+<!-- HALAMAN KEDUA -->
 
-.page2{
-background:radial-gradient(circle at top,
-#4c1d95 0%,
-#312e81 40%,
-#0f172a 100%);
-overflow:hidden;
-}
+<div class="card page2 hidden" id="page2">
 
-.page2::before{
-content:"🌙";
-position:absolute;
-top:20px;
-right:25px;
-font-size:65px;
-filter:drop-shadow(0 0 15px white);
-}
+<h1>🎉 HAPPY BIRTHDAY 🎉</h1>
 
-.page2::after{
-content:"✨ ✨ ✨";
-position:absolute;
-top:90px;
-left:20px;
-font-size:18px;
-animation:twinkle 3s infinite alternate;
-}
+<div class="photo-container">
 
-@keyframes twinkle{
-from{opacity:.3;}
-to{opacity:1;}
-}
+<img
+src="Sidar.jpg"
+class="photo photo1"
+alt="Foto Syamsidar">
 
-.photo-container{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:18px;
-flex-wrap:wrap;
-margin:30px 0;
-}
+<img
+src="file_00000000a11471fa8f7d4446911a8400.jpg"
+class="photo photo2"
+alt="Foto Syamsidar">
 
-.photo{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:18px;
-border:5px solid white;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-transition:.4s;
-}
+</div>
 
-.photo:hover{
-transform:scale(1.05);
-}
+<div class="message-card">
 
-.photo1{
-transform:rotate(-6deg);
-animation:floatLeft 4s ease-in-out infinite;
-}
+<h3 style="text-align:center;margin-bottom:15px;">
+💌 Untuk Syamsidar
+</h3>
 
-.photo2{
-transform:rotate(6deg);
-animation:floatRight 4s ease-in-out infinite;
-}
+<p>
 
-@keyframes floatLeft{
+Selamat ulang tahun ya... ✨
 
-0%{
-transform:translateY(0) rotate(-6deg);
-}
+<br><br>
 
-50%{
-transform:translateY(-15px) rotate(-6deg);
-}
+Semoga Allah SWT selalu memberikan kesehatan,
+umur yang panjang dan penuh keberkahan,
+serta kebahagiaan di setiap langkahmu.
 
-100%{
-transform:translateY(0) rotate(-6deg);
-}
+<br><br>
 
-}
+Semoga setiap doa yang kamu panjatkan
+diijabah oleh Allah,
+setiap impianmu dimudahkan,
+dan setiap usaha yang kamu lakukan
+berbuah hasil terbaik.
 
-@keyframes floatRight{
+<br><br>
 
-0%{
-transform:translateY(-15px) rotate(6deg);
-}
+Tetaplah menjadi pribadi yang baik,
+rendah hati,
+kuat menghadapi segala ujian,
+dan selalu menjadi alasan senyum
+bagi orang-orang di sekitarmu.
 
-50%{
-transform:translateY(0) rotate(6deg);
-}
+<br><br>
 
-100%{
-transform:translateY(-15px) rotate(6deg);
-}
+Terima kasih sudah menjadi dirimu sendiri.
+Semoga hari ini menjadi awal dari
+tahun yang lebih indah daripada sebelumnya.
 
-}
+🤍✨
 
-h1{
-font-size:2.2rem;
-margin-bottom:10px;
-}
+</p>
 
-button{
-margin-top:20px;
-padding:14px 28px;
-border:none;
-border-radius:40px;
-background:#ff4d6d;
-color:white;
-font-size:16px;
-cursor:pointer;
-transition:.3s;
-}
+</div>
 
-button:hover{
-transform:scale(1.08);
-box-shadow:0 0 20px #ff4d6d;
-}
+<div class="signature">
 
-.message-card{
-margin-top:20px;
-padding:22px;
-background:rgba(255,255,255,.12);
-border-radius:20px;
-backdrop-filter:blur(8px);
-line-height:1.8;
-text-align:left;
-box-shadow:0 0 20px rgba(255,255,255,.15);
-}
+BAHAGIA SELALU 😊
 
-.signature{
-margin-top:20px;
-font-size:20px;
-font-weight:bold;
-}  
+</div>
+
+<audio id="musik" loop>
+<source src="8cf90f3e3bf148bcd5823a883453d1a4.mp3" type="audio/mpeg">
+</audio>
+
+</div>
 <script>
 
 function showSurprise(){
